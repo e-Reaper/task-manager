@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/basic.css">
+		<script type="text/javascript" src="js/basic.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Handlee&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+	</head>
+	<body >
+		<!-- header for the task manager -->
+		<header>
+			<ul class = "header">
+				<li>
+					<div class = "title"> TASK MANAGER </div>
+				</li>
+				<li>
+					<input name = "search" type = "search" id = "search"  placeholder="search task or topic" />
+				</li>
+				<li>
+					<div class = "profile"> YOUR NAME </div>
+				</li>
+				<li>
+					<div onclick = " toggleCustomiser() "><i class="fa fa-cog fa-spin setting-button"></i> </div>
+				</li>
+			</ul>
+		</header>
+		<!--  side bar for listing of the tasklist -->
+		<aside class = "leftbar">
+			<section class = "add-new-tasklist">
+				<textarea type = "text" placeholder = "please enter topic for tasklist" id = "newTaskListTopic"></textarea>
+				<br/>
+				<button onclick = "addTaskList()"> Add a tasklist </button>
+			</section>
+			<section id = "task-list-container" class = "list-container">	
+			</section>
+		</aside>
+		<!-- main body contianing the cards and boards -->
+		<article class = "dashboard" id="task-container">
+			<h1 id = "taskList-topic-selected"></h1>
+			<section class = "add-new-task" id="new-task-generator">
+				<textarea type = "text" placeholder = "please enter your task" id = "newTaskContent"></textarea>
+				<br/>
+				<button onclick = "addTask()"> Add a tasklist </button>
+			</section>
+						
+		</article>
+		<!-- sidebar for options to customise -->
+		<aside class = "rightbar" id="right-bar">
+			<span class = "customiser-head">CHANGE BACKGROUND</span>	
+			<section class = "customiser-container" id="customiser-parent">
+				<br/>
+				<div class = "back-cover" ><input type="hidden" value="purty_wood_@2X.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="natural_paper_@2X.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="debut_dark_@2X.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="crisp_paper_ruffles_@2X.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="textured_paper.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="textured_paper_@2X.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="upfeathers.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="school.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="wov.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="pink_rice.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="paisley.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="new_year_background.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="confectionary.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="retina_wood_@2X.png" disabled></div>
+			</section>
+		</aside>
+	</body>
+	
+</html>
