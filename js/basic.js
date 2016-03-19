@@ -69,6 +69,7 @@ function createTaskListView (pos,topic) {
 	// put task topic text into heading 
 	cardHeading.appendChild ( headingText );
 	
+	// put heading into the tasklist container
 	cardElement.appendChild ( cardHeading );
 	
 	// create edit button
@@ -85,7 +86,10 @@ function createTaskListView (pos,topic) {
 	toolbar.appendChild( edit );
 	toolbar.appendChild( del );
 	
+	// putting the toolbar inside the tasklist container
 	cardElement.appendChild ( toolbar );
+
+	// here we get our card , putting all the pieces together
 	var taskListContainer = document.getElementById ( 'task-list-container' );
 	taskListContainer.insertBefore ( cardElement , taskListContainer.childNodes[0] );
 }
