@@ -2,6 +2,7 @@ body {
 	padding: 0px;
 	margin:	0px;
 	background-attachment: fixed;
+	background-image: url("img/purty_wood_@2X.png");
 }
 
 header {
@@ -9,11 +10,11 @@ header {
 	width: 100%; 
 	z-index: 3;
 	margin: 0px;
-	background: #3FBD1A;	
+	background: #FF912B;
 }
 
 .header {
-	margin: 0px 0px 10px;
+	margin: 0px;
 	list-style-type: none;
 }
 
@@ -22,28 +23,23 @@ header {
 	margin-right: 5%;
 	margin-top: 1%;
 	margin-bottom: 1%;
+	font-size: 30px;
+	margin: 2px;
+	color: white;
 }
 
 .header li:last-child {
 	float: right;
 }
 
-.header li:nth-child(2) {
-	width:50%;
+.title {
+	color: white;
+	font-family: 'Handlee';
+	
 }
-
-.header li input {
-	width: 100%;
-	height: 20px;
-	font-size: 10px;
-}
-.setting-button{
-	font-size: 30px;
-}
-
 .leftbar{
 	padding-top: 5%;
-	background: white;
+	background: #EAE9E9;
 	position: fixed;
 	z-index: 2;
 	width: 20%;
@@ -53,20 +49,25 @@ header {
 }
 
 .list-container{
-	height: 90%;
+	height: 80%;
 	overflow: scroll;
 }
 
 .taskList {
+	font-family: 'Handlee';
+	font-weight: bold;
+	text-transform: uppercase;
 	margin: 5%;
 	width: 86%;
 	padding: 5% 1% 5% 5%;
-	background:	rgba(234, 225, 225, 0.53);
+	background:	rgb(187, 186, 186);
+	position: relative;
+	-webkit-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
 }
 .taskList div{
 	display: inline-block;
 	vertical-align: top;
-
 }
 .task-list-heading{
 	width: 70%;
@@ -76,23 +77,35 @@ header {
 	width: 25%;
 }
 .add-new-tasklist{
-	border:1px solid #eee;
 	padding:2%;
-	height: 10%
+	height: 15%
 }
 .add-new-tasklist textarea{
+	border: none;
+	border-radius: 5px;
 	width:96%;
 }
-.add-new-tasklist {
-	background: white;
-}
-
-
 .done , .edit , .del {
 	display: inline-block;
-	margin: 2px;
+	margin: 5px;
 	cursor: pointer;
 }
+button {
+	background: #FF912B;
+	border: none;
+	border-radius: 10px;
+	width: 96%;
+	color: white;
+}
+.fa-check-circle-o {
+	color: #d61919;
+}
+.fa-check-circle {
+	color: #0c9;
+}
+.del , .edit {
+	float: right;
+} 
 
 
 .dashboard {
@@ -108,18 +121,35 @@ header {
 	margin: 10px;
 	border-radius: 5px;
 	font-family: 'Handlee', cursive;
-	box-shadow:2px 2px 10px 2px rgb(97, 97, 97);;
+	box-shadow:2px 2px 10px 2px rgb(97, 97, 97);
 }
-.task .task-content{
+#taskList-topic-selected {
+	font-family: 'Handlee';
+	text-decoration: underline;
+}
+.add-new-task textarea {
+	border: none;
+  border-radius: 5px;
+  height: 100px;
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.add-new-task {
+	max-width: 250px;
+}
+.task .task-content {
 	max-width: 200px;
 	max-height:200px;
 	overflow-x: scroll;
 }
-
+.task-done {
+	box-shadow:2px 2px 10px 2px rgb(159, 243, 135) !important;
+}
 .rightbar {
 	width: 200px;
 	padding-top: 5%;
-	background: rgba(63, 189, 26, 0.5);
+	background: rgba(169, 167, 166, 0.72);
 	position: fixed;
 	z-index: 2;
 	right: -200px;
@@ -150,7 +180,47 @@ header {
 	cursor: pointer;
 }
 
+modal {
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	background: black;
+	z-index:2;
+	font-family: 'Handlee' , cursive;
+}
+.modal-heading {
+	font-size: 30px;
+}
+modal article{
+	background: white;
+	display: inline-block;
+	vertical-align: middle;
+	width:50%;
+	margin:10% 25%;
+	height:50%;
+}
+modal article div {
+	margin:10%;
+	text-align: center;
+}
 
-
-
-
+modal textarea{
+	height:10%;
+	width:50%;
+	display: block;
+	margin: 0 auto;
+}
+modal .button-container {
+	width: 50%;
+	display: block;
+	margin:5% auto;
+}
+modal button {
+	display: inline-block;
+	vertical-align: middle;
+	height: 50px;
+	width: 100px;
+}

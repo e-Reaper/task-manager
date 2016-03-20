@@ -13,25 +13,24 @@
 		<header>
 			<ul class = "header">
 				<li>
+					<i class="fa fa-bars"></i>
+				</li>
+				<li>
 					<div class = "title"> TASK MANAGER </div>
 				</li>
 				<li>
-					<input name = "search" type = "search" id = "search"  placeholder="search task or topic" />
-				</li>
-				<li>
-					<div class = "profile"> YOUR NAME </div>
-				</li>
-				<li>
-					<div onclick = " toggleCustomiser() "><i class="fa fa-cog fa-spin setting-button"></i> </div>
+					<div id = "toggle-sidebar-button"><i class="fa fa-cog fa-spin setting-button"></i> </div>
 				</li>
 			</ul>
 		</header>
 		<!--  side bar for listing of the tasklist -->
 		<aside class = "leftbar">
 			<section class = "add-new-tasklist">
-				<textarea type = "text" placeholder = "please enter topic for tasklist" id = "newTaskListTopic"></textarea>
+				<textarea type = "text" placeholder = "please enter topic for tasklist ... not more than 100 characters" id = "newTaskListTopic"></textarea>
 				<br/>
-				<button onclick = "addTaskList()"> Add a tasklist </button>
+				<span id="tasklist-error-msg"> </span>
+				<br/>
+				<button id = "add-tasklist-button"> Add a tasklist </button>
 			</section>
 			<section id = "task-list-container" class = "list-container">	
 			</section>
@@ -40,9 +39,11 @@
 		<article class = "dashboard" id="task-container">
 			<h1 id = "taskList-topic-selected"></h1>
 			<section class = "add-new-task" id="new-task-generator">
-				<textarea type = "text" placeholder = "please enter your task" id = "newTaskContent"></textarea>
+				<textarea placeholder = "please enter your task... must not exceed 200 characters" id = "newTaskContent"></textarea>
 				<br/>
-				<button onclick = "addTask()"> Add a tasklist </button>
+				<span id="task-error-msg"> </span>
+				<br/>
+				<button id="add-task-button" > Add a task </button>
 			</section>
 						
 		</article>
@@ -65,8 +66,34 @@
 				<div class = "back-cover" ><input type="hidden" value="new_year_background.png" disabled></div>
 				<div class = "back-cover" ><input type="hidden" value="confectionary.png" disabled></div>
 				<div class = "back-cover" ><input type="hidden" value="retina_wood_@2X.png" disabled></div>
+				<div class = "back-cover" ><input type="hidden" value="carbon_fibre.png" disabled></div>
 			</section>
 		</aside>
+		<modal class = "" id = "modal-topic">
+			<article>
+				<div class = "modal-heading">
+					EDIT TOPIC 
+				</div>
+				<textarea id = "tasklist-editor"></textarea>
+				<div class = "button-container">
+					<button id = "save-edited-topic"> SAVE </button>
+					<button id = "closeModal-topic"> CANCEL </button>
+				</div>
+			</article>	
+		</modal>
+		<modal class = "" id = "modal-task">
+			<article>
+				<div class = "modal-heading">
+					EDIT TASK
+				</div>
+				<textarea id = "task-editor"></textarea>
+				<div class = "button-container">
+					<button  id = "save-edited-task"> SAVE </button>
+					<button id = "closeModal-task"> CANCEL </button>
+				</div>
+			</article>	
+		</modal>
+
 	</body>
 	
 </html>
